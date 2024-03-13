@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #nada {
+            color: red;
+            background-color: yellow;
+            padding: 10px;
+            width: 10%;
+        }
+
+    </style>
+    <title>Document</title>
+
+</head>
+<button onclick="verificarTexto()">Verificar</button>
+<input type="text" id="cajaTexto" placeholder="Escribe algo...">
+
+<p id="mensaje"></p>
+
+    <script>
+        function verificarTexto () {
+            let texto = document.getElementById('cajaTexto').value;
+            if (texto == '') {
+                document.getElementById('mensaje').innerHTML = '<p id="nada">No has escrito nada.</p>';
+            } else {
+               alert('Has escrito algo');
+               console.log(texto)
+            }
+
+        }
+
+    </script>
+</body>
+</html>
