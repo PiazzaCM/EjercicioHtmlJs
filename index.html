@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        #nada {
+        .nada {
             color: red;
             background-color: yellow;
             padding: 10px;
             width: 10%;
+            display:none;
         }
 
     </style>
@@ -18,16 +19,18 @@
 <button onclick="verificarTexto()">Verificar</button>
 <input type="text" id="cajaTexto" placeholder="Escribe algo...">
 
-<p id="mensaje"></p>
+<p id="mensaje" class="nada"> Cargue algo porfavor</p>
 
     <script>
         function verificarTexto () {
             let texto = document.getElementById('cajaTexto').value;
+
             if (texto == '') {
-                document.getElementById('mensaje').innerHTML = '<p id="nada">No has escrito nada.</p>';
+                document.getElementById('mensaje').style.display = 'block';
             } else {
-               alert('Has escrito algo');
-               console.log(texto)
+               alert('Has escrito algo: '+ texto); 
+               console.log('has escrito algo: ' + texto);
+               document.getElementById('mensaje').style.display = 'none';
             }
 
         }
